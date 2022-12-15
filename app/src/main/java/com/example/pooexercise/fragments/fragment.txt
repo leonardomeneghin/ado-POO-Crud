@@ -1,0 +1,7 @@
+Esta camada é a camada de UI, nela os dados são exibidos no aplicativo.
+Sempre que os dados mudam, por qualquer motivo que seja, a UI é atualizada para refletir nas mudanças.
+
+A camada de UI precisa conter dois tipos de coleções de objetos
+1º Tipo - IU ELEMENTS - renderizam os dados na tela, são criados usando funções de visualização.
+
+2º Tipo - HOLDERS - como classes "viewModel" que armazenam dados e expoôem à IU e processam lógica.

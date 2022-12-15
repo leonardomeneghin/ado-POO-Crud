@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activitys.PerfilUsuario">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_top_institution"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:cardBackgroundColor="@color/azul_principal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_layout_tolbar_institution"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/card_back_button_instituion"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/image_view_height_card"
+                android:layout_marginStart="@dimen/margin_default_micro"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:src="@drawable/ic_back_button_activity"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_view_top_institution">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_perfil_one_institution"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_view_top_integrante">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_layout_card_perfil_institution"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/image_view_card_photo_institution"
+                    android:layout_width="@dimen/image_width"
+                    android:layout_height="@dimen/image_height"
+                    android:layout_marginStart="@dimen/margin_default"
+                    android:layout_marginTop="@dimen/margin_default_large"
+                    android:clickable="false"
+                    android:onClick="onClick"
+                    android:saveEnabled="false"
+                    android:src="@color/azul_principal"
+                    app:layout_constraintBottom_toTopOf="@id/textview_email_institucao_card_perfil"
+                    app:layout_constraintEnd_toStartOf="@id/edttext_cnpj_institution_card_perfil"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/constraint_layout_card_perfil_institution"
+                    app:shapeAppearanceOverlay="@style/radiusImageView" />
+
+                <TextView
+                    android:id="@+id/textview_institution_name_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_start_textview_card"
+                    android:layout_marginTop="@dimen/margin_default_large"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/name_institution_card"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_card_view_perfil"
+                    app:layout_constraintBottom_toTopOf="@+id/edittext_name_institution_card_perfil"
+                    app:layout_constraintStart_toEndOf="@id/image_view_card_photo_institution"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/edittext_name_institution_card_perfil"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_default_micro"
+                    android:layout_marginTop="@dimen/margin_top_card"
+                    android:layout_marginEnd="@dimen/margin_default"
+                    android:backgroundTint="@color/common_google_signin_btn_text_dark_focused"
+                    android:enabled="false"
+                    android:inputType="textShortMessage"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/image_view_card_photo_institution"
+                    app:layout_constraintTop_toTopOf="@id/image_view_card_photo_institution" />
+
+                <TextView
+                    android:id="@+id/textview_cnpj_institution_card_perfil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_start_textview_card"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/cnpj_instituicao_perfil"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_card_view_perfil"
+                    app:layout_constraintBottom_toTopOf="@id/edttext_cnpj_institution_card_perfil"
+                    app:layout_constraintStart_toEndOf="@+id/image_view_card_photo_institution" />
+
+                <com.vicmikhailau.maskededittext.MaskedEditText
+                    android:id="@+id/edttext_cnpj_institution_card_perfil"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_default_micro"
+                    android:layout_marginTop="@dimen/margin_top_edittext_card"
+                    android:layout_marginEnd="@dimen/margin_default"
+                    android:backgroundTint="@color/common_google_signin_btn_text_dark_focused"
+                    android:enabled="false"
+                    android:inputType="textShortMessage"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/image_view_card_photo_institution"
+                    app:layout_constraintTop_toBottomOf="@id/edittext_name_institution_card_perfil"
+                    app:mask="##.###.###/####-##" />
+
+                <TextView
+                    android:id="@+id/textview_endereco_institution_card_perfil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_start_textview_card"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/endereco_instituicao_card"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_card_view_perfil"
+                    app:layout_constraintBottom_toTopOf="@id/edttext_endereco_institution_card_perfil"
+                    app:layout_constraintStart_toEndOf="@id/image_view_card_photo_institution" />
+
+                <EditText
+                    android:id="@+id/edttext_endereco_institution_card_perfil"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_default_micro"
+                    android:layout_marginTop="@dimen/margin_top_edittext_card"
+                    android:layout_marginEnd="@dimen/margin_default"
+                    android:backgroundTint="@color/common_google_signin_btn_text_dark_focused"
+                    android:enabled="false"
+                    android:inputType="textShortMessage"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/image_view_card_photo_institution"
+                    app:layout_constraintTop_toBottomOf="@id/edttext_cnpj_institution_card_perfil" />
+
+                <TextView
+                    android:id="@+id/textview_email_institucao_card_perfil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_start_textview_two_card"
+                    android:layout_marginTop="@dimen/margin_default"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/email_instituicao_card"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_card_view_perfil"
+                    app:layout_constraintBottom_toTopOf="@id/edttext_email_instituicao_card_perfil"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/image_view_card_photo_institution" />
+
+                <EditText
+                    android:id="@+id/edttext_email_instituicao_card_perfil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_default"
+                    android:layout_marginEnd="@dimen/margin_default"
+                    android:backgroundTint="@color/common_google_signin_btn_text_dark_focused"
+                    android:enabled="false"
+                    android:inputType="textShortMessage"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textview_email_institucao_card_perfil" />
+
+                <TextView
+                    android:id="@+id/textview_telefone_instituicao_perfil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_start_textview_two_card"
+                    android:layout_marginTop="@dimen/margin_top_textview_two_card"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/telefone_instituicao_perfil"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_card_view_perfil"
+                    app:layout_constraintBottom_toTopOf="@+id/edttext_telefone_instituicao_perfil"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/edttext_email_instituicao_card_perfil" />
+
+                <com.vicmikhailau.maskededittext.MaskedEditText
+                    android:id="@+id/edttext_telefone_instituicao_perfil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_default"
+                    android:layout_marginEnd="@dimen/margin_default"
+                    android:layout_marginBottom="@dimen/margin_default"
+                    android:backgroundTint="@color/common_google_signin_btn_text_dark_focused"
+                    android:drawableTint="@color/black"
+                    android:enabled="false"
+                    android:inputType="textShortMessage"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textview_telefone_instituicao_perfil"
+                    app:mask="##-#####-####" />
+
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/floating_back_edit_instituicao_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_bottom_floating"
+                    android:layout_marginBottom="@dimen/margin_default_large"
+                    android:backgroundTint="@color/white"
+                    android:clickable="false"
+                    android:onClick="onClick"
+                    android:src="@drawable/ic_back_edit_floating"
+                    android:tint="@color/vermelho_delete_card"
+                    android:visibility="invisible"
+                    app:borderWidth="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/floating_edt_perfil_instituicao_card" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/floating_done_edit_integrante_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_default"
+                    android:layout_marginBottom="@dimen/margin_default_large"
+                    android:backgroundTint="@color/white"
+                    android:clickable="false"
+                    android:onClick="onClick"
+                    android:src="@drawable/ic_edit_floating"
+                    android:visibility="invisible"
+                    app:borderWidth="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:maxImageSize="36dp" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/floating_edt_perfil_instituicao_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_default"
+                    android:layout_marginEnd="@dimen/margin_default"
+                    android:layout_marginBottom="@dimen/margin_default_large"
+                    android:backgroundTint="@color/white"
+                    android:onClick="onClick"
+                    android:src="@drawable/ic_edit_mode"
+                    app:borderWidth="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/edttext_telefone_instituicao_perfil"
+                    app:maxImageSize="36dp" />
+
+                <ProgressBar
+                    android:id="@+id/progress_bar_perfil_instituicao_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_default"
+                    android:layout_marginBottom="@dimen/margin_default"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/edttext_telefone_instituicao_perfil" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

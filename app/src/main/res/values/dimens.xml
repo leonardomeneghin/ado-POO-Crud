@@ -1,0 +1,53 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!-- Card dimen-->
+    <dimen name="height_size_default_card">90dp</dimen>
+
+    <!-- Elevantion Dimension-->
+    <dimen name="elevantion_default">5dp</dimen>
+
+    <!-- Radius-->
+    <dimen name="radius_default">10dp</dimen>
+
+    <!-- Margin dimension -->
+    <dimen name="margin_default_micro_micro">8dp</dimen>
+    <dimen name="margin_default_micro">10dp</dimen>
+    <dimen name="margin_default_minimum">15dp</dimen>
+    <dimen name="margin_card">16dp</dimen>
+    <dimen name="margin_default">24dp</dimen>
+    <dimen name="margin_lateral">36dp</dimen>
+    <dimen name="margin_default_large">46dp</dimen>
+    <dimen name="margin_default_large_toolbar">50dp</dimen>
+
+    <!-- Text Size -->
+    <dimen name="text_size_minimum">10sp</dimen>
+    <dimen name="text_card_view_perfil">12sp</dimen>
+    <dimen name="text_size_little">11sp</dimen>
+    <dimen name="text_size_hint">14sp</dimen>
+    <dimen name="text_size_card_dog_task">16sp</dimen>
+    <dimen name="text_size_button">18sp</dimen>
+    <dimen name="text_size_month_day">20sp</dimen>
+    <dimen name="text_size_tittle">36sp</dimen>
+    <dimen name="elevantion_default_micro">5dp</dimen>
+    <dimen name="margin_default_card">5dp</dimen>
+    <dimen name="btn_default">240dp</dimen>
+    <dimen name="btn_enter">144dp</dimen>
+    <dimen name="image_width">140dp</dimen>
+    <dimen name="image_height">188dp</dimen>
+    <dimen name="margin_top_card">16dp</dimen>
+    <dimen name="image_view_height_card">48dp</dimen>
+    <dimen name="margin_top_textview_card">24dp</dimen>
+    <dimen name="margin_top_edittext_card">20dp</dimen>
+    <dimen name="margin_start_textview_card">12dp</dimen>
+    <dimen name="margin_start_textview_two_card">27dp</dimen>
+    <dimen name="margin_top_textview_two_card">4dp</dimen>
+    <dimen name="margin_bottom_floating">30dp</dimen>
+
+
+</resources>

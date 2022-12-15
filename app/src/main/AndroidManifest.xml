@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.pooexercise">
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_img_dog_drawer"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_img_dog_drawer"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.pooexercise"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".activitys.TermosUso"
+            android:exported="false" />
+        <activity
+            android:name=".activitys.PerfilUsuario"
+            android:exported="false" />
+        <activity
+            android:name=".activitys.PerfilIntegrante"
+            android:exported="false" />
+        <activity
+            android:name=".activitys.PerfilAnimal"
+            android:exported="false" />
+        <activity
+            android:name=".activitys.PerfilInstituicao"
+            android:exported="false" />
+        <activity
+            android:name=".activitys.CadastroIntegrante"
+            android:exported="false" />
+        <activity
+            android:name=".activitys.CadastrarInstituicao"
+            android:exported="false" />
+        <activity
+            android:name=".activitys.CadastroAnimal"
+            android:exported="false" />
+        <activity
+            android:name=".activitys.Login"
+            android:exported="false" />
+        <activity
+            android:name=".activitys.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activitys.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
